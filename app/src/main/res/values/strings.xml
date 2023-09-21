@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">My Dicoding Submission Session 2</string>
+    <string name="card_title">Nama Hewan</string>
+    <string name="card_description">Card Description</string>
+    <string-array name="data_photo">
+        <item>https://id.wikipedia.org/wiki/Alpaka#/media/Berkas:Alpaca_(31562329701).jpg</item>
+        <item>https://id.wikipedia.org/wiki/Alpaka#/media/Berkas:Alpaca_(31562329701).jpg</item>
+    </string-array>
+    <string-array name="data_name">
+        <item>Alpaca</item>
+        <item>Alpaca</item>
+    </string-array>
+    <string-array name="data_description">
+        <item>Alpaka (Bahasa Inggris : Alpaca) adalah binatang menyusui dari Amerika Selatan yang menyerupai llama. Alpaka berukuran lebih kecil daripada llama, dan alpaka tak digunakan sebagai hewan pengangkut, tetapi untuk diambil bulunya. Serat alpaka digunakan untuk membuat barang rajutan dan jahitan, seperti wol domba. Alpaka biasa ditemukan di Argentina bagian utara, dari keluarga Camelidae. Alpaka digembalakan untuk merumput di Pegunungan Andes di Ekuador, Peru selatan, Bolivia utara, dan Cili utara pada ketinggian 3500–5000 m dpl.</item>
+        <item>Alpaka (Bahasa Inggris : Alpaca) adalah binatang menyusui dari Amerika Selatan yang menyerupai llama. Alpaka berukuran lebih kecil daripada llama, dan alpaka tak digunakan sebagai hewan pengangkut, tetapi untuk diambil bulunya. Serat alpaka digunakan untuk membuat barang rajutan dan jahitan, seperti wol domba. Alpaka biasa ditemukan di Argentina bagian utara, dari keluarga Camelidae. Alpaka digembalakan untuk merumput di Pegunungan Andes di Ekuador, Peru selatan, Bolivia utara, dan Cili utara pada ketinggian 3500–5000 m dpl.</item>
+    </string-array>
+</resources>
