@@ -1,8 +1,12 @@
 package com.example.mydicodingsubmissionsession2
 
+import android.content.Intent
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -37,12 +41,30 @@ class MainActivity : AppCompatActivity() {
         showRecyclerList()
     }
 
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.main_menu, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.change_list_view -> {
+                animalListContainer.layoutManager = LinearLayoutManager(this)
+            }
+
+            R.id.change_grid_view -> {
+                animalListContainer.layoutManager = GridLayoutManager(this, 2)
+            }
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
     private fun showRecyclerList() {
         animalListContainer.layoutManager = LinearLayoutManager(this)
         val listAnimalAdapter = ListAnimalAdapter(list)
         animalListContainer.adapter = listAnimalAdapter
 
-        listAnimalAdapter.setOnItemClickCallback(object:ListAnimalAdapter.OnItemClickCallback{
+        listAnimalAdapter.setOnItemClickCallback(object : ListAnimalAdapter.OnItemClickCallback {
             override fun onItemClicked(data: Animal) {
                 showAnimalSelected(data)
             }
