@@ -5,8 +5,8 @@
     <string name="list_view_menu_text">List View</string>
     <string name="grid_view_menu_text">Grid View</string>
     <string-array name="data_photo">
-        <item>https://id.wikipedia.org/wiki/Alpaka#/media/Berkas:Alpaca_(31562329701).jpg</item>
-        <item>https://id.wikipedia.org/wiki/Alpaka#/media/Berkas:Alpaca_(31562329701).jpg</item>
+        <item>https://dicoding-web-img.sgp1.cdn.digitaloceanspaces.com/small/avatar/dos:a4e7d96164d816a863ab295ef21b616020230920123326.png</item>
+        <item>https://dicoding-web-img.sgp1.cdn.digitaloceanspaces.com/small/avatar/dos:a4e7d96164d816a863ab295ef21b616020230920123326.png</item>
     </string-array>
     <string-array name="data_name">
         <item>Alpaca</item>

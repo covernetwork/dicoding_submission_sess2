@@ -4,14 +4,19 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.mydicodingsubmissionsession2.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
+    companion object {
+        const val EXTRA_ANIMAL = "extra_animal"
+    }
+
+    private lateinit var binding: ActivityMainBinding
     private lateinit var animalListContainer: RecyclerView
     private val list = ArrayList<Animal>()
 
@@ -27,12 +32,15 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun showAnimalSelected(animal: Animal) {
-        Toast.makeText(this, "kamu memilih ${animal.name}", Toast.LENGTH_SHORT).show()
+        val moveToDetail = Intent(this@MainActivity, DetailAnimalActivity::class.java)
+        moveToDetail.putExtra(EXTRA_ANIMAL,animal)
+        startActivity(moveToDetail)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         animalListContainer = findViewById(R.id.animal_list_container)
         animalListContainer.setHasFixedSize(true)
