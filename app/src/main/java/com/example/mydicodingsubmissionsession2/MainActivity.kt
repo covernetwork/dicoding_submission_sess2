@@ -4,13 +4,14 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mydicodingsubmissionsession2.databinding.ActivityMainBinding
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     companion object {
         const val EXTRA_ANIMAL = "extra_animal"
@@ -33,7 +34,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun showAnimalSelected(animal: Animal) {
         val moveToDetail = Intent(this@MainActivity, DetailAnimalActivity::class.java)
-        moveToDetail.putExtra(EXTRA_ANIMAL,animal)
+        moveToDetail.putExtra(EXTRA_ANIMAL, animal)
         startActivity(moveToDetail)
     }
 
@@ -47,6 +48,9 @@ class MainActivity : AppCompatActivity() {
 
         list.addAll((getData()))
         showRecyclerList()
+
+        binding.fabGoToProfile.setOnClickListener(this)
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -77,6 +81,15 @@ class MainActivity : AppCompatActivity() {
                 showAnimalSelected(data)
             }
         })
+    }
+
+    override fun onClick(v: View?) {
+        when (v?.id) {
+            R.id.fab_go_to_profile -> {
+                val goToProfileIntent = Intent(this@MainActivity, ProfileActivity::class.java)
+                startActivity(goToProfileIntent)
+            }
+        }
     }
 
 }

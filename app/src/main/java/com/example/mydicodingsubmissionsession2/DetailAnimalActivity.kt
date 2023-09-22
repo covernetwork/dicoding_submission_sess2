@@ -1,10 +1,8 @@
 package com.example.mydicodingsubmissionsession2
 
-import android.R
 import android.os.Build
 import android.os.Bundle
 import android.view.MenuItem
-import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import com.example.mydicodingsubmissionsession2.databinding.ActivityDetailAnimalBinding
@@ -25,8 +23,7 @@ class DetailAnimalActivity : AppCompatActivity() {
         val animal = if (Build.VERSION.SDK_INT >= 33) {
             intent.getParcelableExtra<Animal>(MainActivity.EXTRA_ANIMAL, Animal::class.java)
         } else {
-            @Suppress("DEPRECATION")
-            intent.getParcelableExtra<Animal>(MainActivity.EXTRA_ANIMAL)
+            @Suppress("DEPRECATION") intent.getParcelableExtra<Animal>(MainActivity.EXTRA_ANIMAL)
         }
 
         if (animal != null) {
@@ -37,8 +34,8 @@ class DetailAnimalActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when(item.itemId){
-            R.id.home->{
+        when (item.itemId) {
+            android.R.id.home -> {
                 finish()
             }
         }

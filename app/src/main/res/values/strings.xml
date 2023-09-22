@@ -4,6 +4,8 @@
     <string name="card_description">Card Description</string>
     <string name="list_view_menu_text">List View</string>
     <string name="grid_view_menu_text">Grid View</string>
+    <string name="fab_go_to_profile">FAB go to profile</string>
+    <string name="catur_wicaksono">Catur Wicaksono</string>
     <string-array name="data_photo">
         <item>https://dicoding-web-img.sgp1.cdn.digitaloceanspaces.com/small/avatar/dos:a4e7d96164d816a863ab295ef21b616020230920123326.png</item>
         <item>https://dicoding-web-img.sgp1.cdn.digitaloceanspaces.com/small/avatar/dos:a4e7d96164d816a863ab295ef21b616020230920123326.png</item>
